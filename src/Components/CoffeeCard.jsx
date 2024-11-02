@@ -21,7 +21,7 @@ const CoffeeCard = () => {
 
     return (
         <>
-            <div className="grid md:grid-cols-2 py-3 my-4 gap-10 lg:grid-cols-3">
+            <div className="grid md:grid-cols-2 py-3 my-12 gap-10 lg:grid-cols-3">
                 {
                     coffee.map(coffe => <Card key={coffe.id} coffe={coffe}></Card>)
                 }
