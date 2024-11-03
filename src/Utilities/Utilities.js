@@ -26,5 +26,13 @@ const setDataToLocalStorage = (coffee) => {
    
 }
 
+const removeToLocalStorage = (id) =>{
+    const StoredItem = getDataToLocalStorage();
+    const RemainingItem = StoredItem.filter(coffee=> coffee.id != id);
+    const items = JSON.stringify(RemainingItem);
+    localStorage.setItem('favorite', items)
+    toast.success('Successfully removed!')
+}
 
-export { setDataToLocalStorage ,getDataToLocalStorage} 
+
+export { setDataToLocalStorage ,getDataToLocalStorage ,removeToLocalStorage} 

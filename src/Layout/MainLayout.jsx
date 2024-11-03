@@ -7,7 +7,9 @@ import 'react-toastify/dist/ReactToastify.css';
 const MainLayout = () => {
     return (
         <div >
-            <ToastContainer />
+            <ToastContainer 
+             position="top-center"
+             reverseOrder={false} />
             <div className="h-16">
                 <Navbar></Navbar>
             </div>
