@@ -26,7 +26,7 @@ const CoffeeCard = () => {
                     coffee.map(coffe => <Card key={coffe.id} coffe={coffe}></Card>)
                 }
             </div>
-            <button onClick={()=> navigate('/coffees')} className='text-xl font-bold btn btn-warning'>Show All</button>
+            <button onClick={()=> navigate('/coffees')} className='text-xl font-bold btn bg-yellow-300'>Show All</button>
         </>
     );
 };
