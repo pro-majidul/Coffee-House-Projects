@@ -1,3 +1,7 @@
+import { toast } from 'react-toastify';
+
+
+
 const getDataToLocalStorage = () => {
     const allData = localStorage.getItem('favorite')
     if (allData) {
@@ -12,11 +16,12 @@ const setDataToLocalStorage = (coffee) => {
     const StoredItem = getDataToLocalStorage();
     const isExist = StoredItem.find( item => item.id === coffee.id);
     if (isExist) {
-      return  alert('already added')
+      return toast.warning('Already added')
     } else {
         StoredItem.push(coffee);
         const items = JSON.stringify(StoredItem);
         localStorage.setItem('favorite', items)
+        toast.success('Successfully Added!')
     }
    
 }

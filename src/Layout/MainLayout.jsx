@@ -1,16 +1,19 @@
 import { Outlet } from "react-router-dom";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const MainLayout = () => {
     return (
         <div >
+            <ToastContainer />
             <div className="h-16">
-            <Navbar></Navbar>
+                <Navbar></Navbar>
             </div>
             <div className="min-h-[calc(100vh-232px)] container mx-auto px-12 my-10">
 
-            <Outlet></Outlet>
+                <Outlet></Outlet>
             </div>
             <Footer></Footer>
         </div>
